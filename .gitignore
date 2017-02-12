@@ -3,4 +3,5 @@ build/
 .coverage
 *.egg-info
 dist/
-
+.idea
+.env

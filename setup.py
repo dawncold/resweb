@@ -1,23 +1,23 @@
 from setuptools import setup, find_packages
-version=__import__('resweb').__version__
+version = __import__('resweb').__version__
 setup(
-    name='resweb',
+    name='resweb-dc',
     version=version,
     description='Pyres web interface',
-    author='Matt George',
-    author_email='mgeorge@gmail.com',
-    maintainer='Matt George',
+    author='dc',
+    author_email='loooseleaves@gmail.com',
+    maintainer='dc',
     license='MIT',
-    url='http://github.com/Pyres/resweb',
+    url='https://github.com/dawncold/resweb',
     packages=find_packages(exclude=['ez_setup', 'examples', 'tests']),
     download_url='http://pypi.python.org/packages/source/p/resweb/resweb-%s.tar.gz' % version,
     include_package_data=True,
-    package_data={'resweb': ['templates/*.mustache','static/*']},
+    package_data={'resweb': ['templates/*.mustache', 'static/*']},
     install_requires=[
         'pyres>=1.3',
         'flask'
     ],
-    entry_points = """\
+    entry_points="""\
     [console_scripts]
     resweb=resweb.core:main
     """,

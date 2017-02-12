@@ -38,7 +38,7 @@ def authenticate():
 def requires_auth(f):
     @wraps(f)
     def decorated(*args, **kwargs):
-        print app.config.get('BASIC_AUTH')
+        print(app.config.get('BASIC_AUTH'))
         auth = request.authorization
         if app.config.get('BASIC_AUTH') and (not auth or not check_auth(auth.username, auth.password)):
             return authenticate()
@@ -192,7 +192,7 @@ def worker(worker_id):
         'resweb_version': view_worker.resweb_version(),
         'address': view_worker.address()
     }
-    print data
+    print(data)
     return render_template('worker.html', data=data)
 
 @app.route('/workers/')
@@ -207,7 +207,7 @@ def workers():
         'resweb_version': view_workers.resweb_version(),
         'address': view_workers.address()
     }
-    print data
+    print(data)
     return render_template('workers.html', data=data)
 
 @app.route('/stats/')
@@ -228,7 +228,7 @@ def stats(key):
         'resweb_version': view_stats.resweb_version(),
         'address': view_stats.address()
     }
-    print data
+    print(data)
     return render_template('stats.html', data=data)
 
 @app.route('/stat/<stat_id>/')
@@ -245,7 +245,7 @@ def stat(stat_id):
         'resweb_version': view_stat.resweb_version(),
         'address': view_stat.address()
     }
-    print data
+    print(data)
     return render_template('stat.html', data=data)
 
 @app.route('/delayed/')
@@ -262,7 +262,7 @@ def delayed():
         'resweb_version': view_delayed.resweb_version(),
         'address': view_delayed.address()
     }
-    print data
+    print(data)
     return render_template('delayed.html', data=data)
 
 @app.route('/delayed/<timestamp>/')
@@ -280,7 +280,7 @@ def delayed_timestamp(timestamp):
         'resweb_version': view_dt.resweb_version(),
         'address': view_dt.address()
     }
-    print data
+    print(data)
     return render_template('delayed_timestamp.html', data=data)
 
 def main():

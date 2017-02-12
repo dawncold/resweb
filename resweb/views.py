@@ -1,3 +1,4 @@
+from __future__ import division
 from pyres import __version__
 from resweb import __version__ as res_version
 from pyres.worker import Worker as Wrkr
@@ -30,7 +31,7 @@ class ResWeb(object):
     def pages(self, start, size, link_function, width=20):
         pages = []
 
-        num_pages = size / width
+        num_pages = size // width
         if size % width > 0:
             num_pages += 1
 
