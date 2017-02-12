@@ -10,7 +10,7 @@ setup(
     license='MIT',
     url='https://github.com/dawncold/resweb',
     packages=find_packages(exclude=['ez_setup', 'examples', 'tests']),
-    download_url='http://pypi.python.org/packages/source/p/resweb/resweb-%s.tar.gz' % version,
+    download_url='http://pypi.python.org/packages/source/p/resweb-dc/resweb-%s.tar.gz' % version,
     include_package_data=True,
     package_data={'resweb': ['templates/*.mustache', 'static/*']},
     install_requires=[
