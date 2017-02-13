@@ -20,7 +20,7 @@ setup(
     [console_scripts]
     resweb=resweb.core:main
     """,
-    classifiers = [
+    classifiers=[
             'Development Status :: 4 - Beta',
             'Environment :: Console',
             'Intended Audience :: Developers',
