@@ -39,9 +39,9 @@ class ResWeb(object):
             return pages
 
         for i in range(num_pages):
-            current = True
+            current = False
             if start == i * width:
-                current = False
+                current = True
             link = link_function(i * width)
             link_name = str(i + 1)
             pages.append(dict(link=link, link_name=link_name, current=current))

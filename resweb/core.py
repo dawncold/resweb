@@ -105,7 +105,7 @@ def queues():
 @requires_auth
 def queue(queue_id):
     start = int(request.args.get('start', 0))
-    view_queue =  Queue(g.pyres, queue_id, start)
+    view_queue = Queue(g.pyres, queue_id, start)
     data = {
         'queue': view_queue.queue(),
         'start': view_queue.start(),
@@ -122,7 +122,7 @@ def queue(queue_id):
 @app.route('/failed/')
 @requires_auth
 def failed():
-    view_failed = Failed(g.pyres)
+    view_failed = Failed(g.pyres, start=int(request.args.get('start', 0)))
     data = {
         'failed_jobs': view_failed.failed_jobs(),
         'start': view_failed.start(),
