@@ -13,13 +13,13 @@
 <tr>
         <td class="icon"><img src="{{ url_for('static', filename=worker.state+'.png') }}" alt="{{ worker.state }}" title="{{ state }}"></td>
         <td class="where"><a href="{{ url_for('.worker', worker_id=worker.w) }}">{{ worker.host }}:{{ worker.pid }}</a></td>
-        <td class="queues queue"">
+        <td class="queues queue">
           <a class="queue-tag" href="{{ url_for('.queue', queue_id=worker.queue) }}">{{worker.queue }}</a>
         </td>
         <td class="process">
             {% if worker.data %}
-                <code>{{code}}</code>
-                <small><a class="queue time" href="{{ url_for('.worker.', worker_id=worker.w) }}">{{ worker.runat }}</a></small>
+                <code>{{ worker.code }}</code>
+                <small><a class="queue time" href="{{ url_for('.worker', worker_id=worker.w) }}">{{ worker.runat }}</a></small>
               {% else %}
                 <span class="waiting">Waiting for a job...</span>
               {% endif %}
