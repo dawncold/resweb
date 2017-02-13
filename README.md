@@ -1,5 +1,9 @@
 CHANGES
 =====
+## v 0.1.9
+* fix: failed jobs pagination and failed jobs
+* fix: working process title
+## v 0.1.8
 * original project commits after 2013-05-29
 * `print` --> `print()`
 * / ----> //
